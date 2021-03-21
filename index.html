@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
 </head>
-<body onload="loadHtml('F1')">
+<body>
     
     <!--
     <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
@@ -77,17 +77,22 @@
             </div>
         </nav>
     </div>
-    <div class = "content">
-        <div class="row pt-2 pb-2">
-            <div class="col-md-6 col-xs-12 offset-md-1 mr-1 summary" id='imageLoad'></div>
-            <div class="col-md-4 col-xs-12 summary">
+    <div class = "content d-flex align-items-center">
+        <div class="row" style="height: 80%;">
+            <div class="col-md-6 col-xs-12 offset-md-1 mr-1 summary" id='imageLoad'>
+                <div class="pl-4 pt-4 mb-4" style="height: 50px;"><h4 style="font-family: 'Times New Roman', Times, serif;color:#0BADA6;font-weight: bold;">Summary: Latitude vs. X</h4></div>
+                <div class="pl-4 mb-2" style="height: 50px;"><hr style="width:90%;text-align:left;margin-left:0"></div>
+                <p class="para"><img id='FigDefault' src="../Web-Design-Challenge/Resources/assets/images/Fig1.png" class="img-thumbnail m-2" style="float:left;height:200px;width:200px;">The purpose of this project was to analysis how weather patterns may change and alter as one travels closer to the equator. An Open Weather API and the CitiPy Python Library to randomly pull 500 cities from around the world was to create the dataset. </p>
+                <p class="para">After assembling the data, Pandas and Matplotlib Python libraries were used to analyze the data set. The four dependent variables were: Max Temperature, Humidity, Cloudiness, and Wind Speed. This dashboard shows the source data and the visualizations based on the four dependent variables.</p>
+            </div>
+            <div class="col-md-4 col-xs-12 summary" style="height: 80%;">
                 <div class="row pl-4 pt-4 mb-4" style="height: 50px;"><h4 style="font-family: 'Times New Roman', Times, serif;color:#0BADA6;font-weight: bold;">Visualizations</h4></div>
                 <div class="row pl-4 mb-2" style="height: 50px;"><hr style="width:90%;text-align:left;margin-left:0"></div>
                 <div class="row">
-                    <div class="col-md-5 offset-md-1 mb-4"><a href="#"><img src="../Web-Design-Challenge/Resources/assets/images/Fig1.png" class="img-thumbnail" onclick="loadHtml('F1')"></img></a></div>
-                    <div class="col-md-5  mb-4"><a href="#"><img src="../Web-Design-Challenge/Resources/assets/images/Fig2.png" class="img-thumbnail" onclick="loadHtml('F2')"></img></a></div>
-                    <div class="col-md-5 offset-md-1 mb-4"><a href="#"><img src="../Web-Design-Challenge/Resources/assets/images/Fig3.png" class="img-thumbnail" onclick="loadHtml('F3')"></img></a></div>
-                    <div class="col-md-5 mb-4"><a href="#"><img src="../Web-Design-Challenge/Resources/assets/images/Fig4.png" class="img-thumbnail" onclick="loadHtml('F4')"></img></a></div>
+                    <div class="col-md-5 offset-md-1 mb-4"><a href="#"><img id='Fig1' src="../Web-Design-Challenge/Resources/assets/images/Fig1.png" class="img-thumbnail" onclick="loadHtml('MaxTemp.html')"></img></a></div>
+                    <div class="col-md-5  mb-4"><a href="#"><img id='Fig2' src="../Web-Design-Challenge/Resources/assets/images/Fig2.png" class="img-thumbnail" onclick="loadHtml('Humidity.html')"></img></a></div>
+                    <div class="col-md-5 offset-md-1 mb-4"><a href="#"><img id='Fig3' src="../Web-Design-Challenge/Resources/assets/images/Fig3.png" class="img-thumbnail" onclick="loadHtml('Cloudiness.html')"></img></a></div>
+                    <div class="col-md-5 mb-4"><a href="#"><img id='Fig4' src="../Web-Design-Challenge/Resources/assets/images/Fig4.png" class="img-thumbnail" onclick="loadHtml('WindSpeed.html')"></img></a></div>
                 </div>
             </div>
         </div>
@@ -101,8 +106,7 @@
 </body>
 
 <script>
-    function loadHtml(image) {
-        var htmlPage = image + "Image.html";
+    function loadHtml(htmlPage) {
         document.getElementById('imageLoad').innerHTML='<object style="width:100%;height:100%;" type="text/html" data="' + htmlPage + '" ></object>';
     }
 </script>
