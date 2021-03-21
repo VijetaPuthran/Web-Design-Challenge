@@ -13,6 +13,12 @@ body{
     margin-left: 4%;
 }
 
+h4, h6 {
+    font-family: 'Times New Roman', Times, serif;
+    color:#0BADA6;
+    font-weight: bold;
+}
+
 #Fig1:hover, #Fig2:hover, #Fig3:hover, #Fig4:hover {
     transform: scale(1.5);
     transition: transform .2s;
