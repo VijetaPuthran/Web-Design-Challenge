@@ -37,48 +37,53 @@
     </div>  
     </nav>
     -->
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-transparent">
-            <a class="header" href="#" onclick="window.location.reload();">Latitude</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav menu">
-                    <!--
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Plots</a>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#">Max Temperature</a></li>
-                          <li><a class="dropdown-item" href="#">Humidity</a></li>
-                          <li><a class="dropdown-item" href="#">Cloudiness</a></li>
-                          <li><hr class="dropdown-divider"></li>
-                          <li><a class="dropdown-item" href="#">Wind Speed</a></li>
-                        </ul>
-                      </li>
-                      -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                          Plots
-                        </a>
-                        <div class="dropdown-menu">
-                          <a class="dropdown-item" href="#" onclick="loadHtml('MaxTemp.html')">Max Temperature</a>
-                          <a class="dropdown-item" href="#"onclick="loadHtml('Humidity.html')">Humidity</a>
-                          <a class="dropdown-item" href="#" onclick="loadHtml('Cloudiness.html')">Cloudiness</a>
-                          <a class="dropdown-item" href="#" onclick="loadHtml('WindSpeed.html')">Wind Speed</a>
-                        </div>
-                    </li>  
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Comparison</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Data</a>
-                    </li>
-                </ul> 
+    
+    <div class = "container-fluid content">
+        <div class="row">
+            <div class="col">
+                <nav class="navbar navbar-expand-md navbar-light bg-transparent">
+                    <a class="header" href="#" onclick="window.location.reload();">Latitude</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                        <ul class="navbar-nav menu">
+                            <!--
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Plots</a>
+                                <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item" href="#">Max Temperature</a></li>
+                                  <li><a class="dropdown-item" href="#">Humidity</a></li>
+                                  <li><a class="dropdown-item" href="#">Cloudiness</a></li>
+                                  <li><hr class="dropdown-divider"></li>
+                                  <li><a class="dropdown-item" href="#">Wind Speed</a></li>
+                                </ul>
+                              </li>
+                              -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                                  Plots
+                                </a>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item" href="#" onclick="loadHtml('MaxTemp.html')">Max Temperature</a>
+                                  <a class="dropdown-item" href="#"onclick="loadHtml('Humidity.html')">Humidity</a>
+                                  <a class="dropdown-item" href="#" onclick="loadHtml('Cloudiness.html')">Cloudiness</a>
+                                  <a class="dropdown-item" href="#" onclick="loadHtml('WindSpeed.html')">Wind Speed</a>
+                                </div>
+                            </li>  
+                            <li class="nav-item">
+                              <a class="nav-link" href="Comparison.html">Comparison</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Data</a>
+                            </li>
+                        </ul> 
+                    </div>
+                </nav>
             </div>
-        </nav>
-    </div>
-    <div class = "content d-flex align-items-center">
+            
+        </div>
+        
         <div class="row">
             <div class="col-md-6 col-sm-12 col-12 offset-md-1 mr-1 summary" id='imageLoad'>
                 <div class="row pl-4 pt-4 mb-4"><h4>Summary: Latitude vs. X</h4></div>
