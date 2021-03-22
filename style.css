@@ -35,19 +35,26 @@ h4, h6 {
 }
 /* Navbar */
 .navbar{
-    max-height: 57px; 
+    /*max-height: 57px; */
+    padding:0;
 }
 /*Content*/
 .content{
     background-color: #EDEDED;
     height: 90vh;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 4%;
+    margin-right: 4%;
 }
 /*Summary*/
 .summary{
     background-color: white;
 }
+
+@media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+  }
 /*
 .navigation .navbar-brand{
     color: white; 
