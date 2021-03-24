@@ -14,8 +14,6 @@ The dashboard includes creating the individual pages for each plot and a means b
 
 ### Website Details
 
-![Landing page large screen](Images/landingResize.png)
-
 The website consists of 7 pages total, including:
 
 * A [landing page](#landing-page) containing:
