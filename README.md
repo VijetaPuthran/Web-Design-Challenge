@@ -2,7 +2,7 @@
 
 ## Background
 
-For this assignment, HTML and CSS was implemented to create a dashboard showing the analysis for Latitude compared to other weater factors.
+For this assignment, HTML and CSS was implemented to create a dashboard showing the analysis for Latitude compared to other weather factors.
 
 ![Images/landingResize.png](Images/landingResize.png)
 
@@ -10,7 +10,7 @@ For this assignment, HTML and CSS was implemented to create a dashboard showing 
 
 The task was to create a visualization dashboard website using the visualizations created earlier in the weather analysis. Specifically, the weather data is used for plotting.(Resources/cities.csv).
 
-The dashboard includes creating the individual pages for each plot and a means by which we can navigate between them. These pages will contain the visualizations and their corresponding explanations. A landing page is also included, a page where we can see a comparison of all of the plots, and another page where we can view the data used to build them.
+The dashboard includes creating the individual pages for each plot and a means by which we can navigate between them. These pages contains the visualizations and their corresponding explanations. A landing page is also included, a page where we can see a comparison of all of the plots, and another page where we can view the data used to build them.
 
 ### Website Details
 
@@ -34,7 +34,7 @@ The website consists of 7 pages total, including:
 
 The website at the top of every page, has a navigation menu that:
 
-* Has the name of the site on the left of the nav which allows users to return to the landing page from any page.
+* Has the name of the site on the left of the navigation bar which allows users to return to the landing page from any page.
 * Contains a dropdown menu on the right of the navbar named "Plots" that provides a link to each individual visualization page.
 * Provides two more text links on the right: "Comparisons," which links to the comparisons page, and "Data," which links to the data page.
 * Is responsive (using media queries).
