@@ -1,75 +1,81 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="style.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-md navbar-light bg-transparent">
-    <a class="header" href="#" onclick="window.location.reload();">Latitude</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="collapsibleNavbar" style="margin-left: 4%;">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-            Plots
-          </a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#" onclick="loadHtml('MaxTemp.html')">Max Temperature</a>
-            <a class="dropdown-item" href="#"onclick="loadHtml('Humidity.html')">Humidity</a>
-            <a class="dropdown-item" href="#" onclick="loadHtml('Cloudiness.html')">Cloudiness</a>
-            <a class="dropdown-item" href="#" onclick="loadHtml('WindSpeed.html')">Wind Speed</a>
-          </div>
-      </li>  
-      <li class="nav-item">
-        <a class="nav-link" href="Comparison.html">Comparison</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="data.html">Data</a>
-      </li>
-      </ul>
-    </div>  
-  </nav>
+    <div class="navbarmenu" id="navigation">
+        <a class="header" href="#" onclick="window.location.reload();">Latitude</a>
+        <div style="float:right;">
+            <div class="dropdownmenu">
+                <button class="dropbtn">
+                    Plots
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a class="menuitem" href="#" onclick="loadHtml('MaxTemp.html')">Max Temperature</a>
+                    <a class="menuitem" href="#" onclick="loadHtml('Humidity.html')">Humidity</a>
+                    <a class="menuitem" href="#" onclick="loadHtml('Cloudiness.html')">Cloudiness</a>
+                    <a class="menuitem" href="#" onclick="loadHtml('WindSpeed.html')">Wind Speed</a>
+                </div>
+            </div>
+            <a class="menuitem" href="data.html">Data</a>
+            <a class="menuitem" href="Comparison.html">Comparison</a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
 
-  <div class="d-flex flex-wrap content row">
-      <div class="col">
-          <div class="m-4 col-lg-10 col-md-10 col-sm-10 summary" style="min-height:90%;" id='imageLoad'>
-              <div class="row pl-4 pt-4 mb-4"><h4>Summary: Latitude vs. X</h4></div>
-              <div class="pl-4 mb-2"><hr style="width:90%;text-align:left;margin-left:0"></div>
-              <div class="row">
-                  <div class="col">
-                      <p class="para"><img id='FigDefault' src="../Web-Design-Challenge/Resources/assets/images/Fig1.png" class="img-thumbnail m-2" style="float:left;height:200px;width:200px;">The purpose of this project was to analysis how weather patterns may change and alter as one travels closer to the equator. An Open Weather API and the CitiPy Python Library to randomly pull 500 cities from around the world was to create the dataset. </p>
-                      <p class="para">After assembling the data, Pandas and Matplotlib Python libraries were used to analyze the data set. The four dependent variables were: Max Temperature, Humidity, Cloudiness, and Wind Speed. This dashboard shows the source data and the visualizations based on the four dependent variables.</p>
-                  </div>
-              </div>
-          </div>
-      </div>
-      
-      <div class="m-4 col-lg-5 col-md-5 col-sm-11 summary">
-          <div class="row pl-4 pt-4 mb-4"><h4>Visualizations</h4></div>
-          <div class="pl-4 mb-2"><hr style="width:90%;text-align:left;margin-left:0"></div>
-          <div class="d-flex flex-sm-nowrap flex-md-wrap flex-lg-wrap bg-light row justify-content-center">
-              <div class="col-md-4 col-lg-4 col-sm-3 col-3 m-md-2 m-lg-2"><h6>vs. Temperature</h6><a href="#"><img id='Fig1' src="../Web-Design-Challenge/Resources/assets/images/Fig1.png" class="img-thumbnail" onclick="loadHtml('MaxTemp.html')"></img></a></div>
-              <div class="col-md-4 col-lg-4 col-sm-3 col-3 m-md-2 m-lg-2"><h6>vs. Humidity</h6><a href="#"><img id='Fig2' src="../Web-Design-Challenge/Resources/assets/images/Fig2.png" class="img-thumbnail" onclick="loadHtml('Humidity.html')"></img></a></div>
-              <div class="col-md-4 col-lg-4 col-sm-3 col-3 m-md-2 m-lg-2"><h6>vs. Cloudiness</h6><a href="#"><img id='Fig3' src="../Web-Design-Challenge/Resources/assets/images/Fig3.png" class="img-thumbnail" onclick="loadHtml('Cloudiness.html')"></img></a></div>
-              <div class="col-md-4 col-lg-4 col-sm-3 col-3 m-md-2 m-lg-2"><h6>vs. Wind Speed</h6><a href="#"><img id='Fig4' src="../Web-Design-Challenge/Resources/assets/images/Fig4.png" class="img-thumbnail" onclick="loadHtml('WindSpeed.html')"></img></a></div>
-          </div>
-      </div>  
+
+    <div class="d-flex flex-wrap content row">
+        <div class="col">
+            <div class="m-4 col-lg-10 col-md-10 col-sm-10 summary" style="min-height:90%;" id='imageLoad'>
+                <div class="row pl-4 pt-4 mb-4"><h4>Summary: Latitude vs. X</h4></div>
+                <div class="pl-4 mb-2"><hr style="width:90%;text-align:left;margin-left:0"></div>
+                <div class="row">
+                    <div class="col">
+                        <p class="para"><img id='FigDefault' src="../Web-Design-Challenge/Resources/assets/images/Fig1.png" class="img-thumbnail m-2" style="float:left;height:200px;width:200px;">The purpose of this project was to analysis how weather patterns may change and alter as one travels closer to the equator. An Open Weather API and the CitiPy Python Library to randomly pull 500 cities from around the world was to create the dataset. </p>
+                        <p class="para">After assembling the data, Pandas and Matplotlib Python libraries were used to analyze the data set. The four dependent variables were: Max Temperature, Humidity, Cloudiness, and Wind Speed. This dashboard shows the source data and the visualizations based on the four dependent variables.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="m-4 col-lg-5 col-md-5 col-sm-11 summary">
+            <div class="row pl-4 pt-4 mb-4"><h4>Visualizations</h4></div>
+            <div class="pl-4 mb-2"><hr style="width:90%;text-align:left;margin-left:0"></div>
+            <div class="d-flex flex-sm-nowrap flex-md-wrap flex-lg-wrap bg-light row justify-content-center">
+                <div class="col-md-4 col-lg-4 col-sm-3 col-3 m-md-2 m-lg-2"><h6>vs. Temperature</h6><a href="#"><img id='Fig1' src="../Web-Design-Challenge/Resources/assets/images/Fig1.png" class="img-thumbnail" onclick="loadHtml('MaxTemp.html')"></img></a></div>
+                <div class="col-md-4 col-lg-4 col-sm-3 col-3 m-md-2 m-lg-2"><h6>vs. Humidity</h6><a href="#"><img id='Fig2' src="../Web-Design-Challenge/Resources/assets/images/Fig2.png" class="img-thumbnail" onclick="loadHtml('Humidity.html')"></img></a></div>
+                <div class="col-md-4 col-lg-4 col-sm-3 col-3 m-md-2 m-lg-2"><h6>vs. Cloudiness</h6><a href="#"><img id='Fig3' src="../Web-Design-Challenge/Resources/assets/images/Fig3.png" class="img-thumbnail" onclick="loadHtml('Cloudiness.html')"></img></a></div>
+                <div class="col-md-4 col-lg-4 col-sm-3 col-3 m-md-2 m-lg-2"><h6>vs. Wind Speed</h6><a href="#"><img id='Fig4' src="../Web-Design-Challenge/Resources/assets/images/Fig4.png" class="img-thumbnail" onclick="loadHtml('WindSpeed.html')"></img></a></div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
 
 <script>
+    function myFunction() {
+        var x = document.getElementById("navigation");
+        if (x.className === "navbarmenu") {
+            x.className += " responsive";
+        } else {
+            x.className = "navbarmenu";
+        }
+    }
+
     function loadHtml(htmlPage) {
         var html = '<object style="width:100%;height:100%;min-height:' + $('#imageLoad').height() * 0.95 + 'px;" type="text/html" data="' + htmlPage + '" ></object>';
         document.getElementById('imageLoad').innerHTML=html;
